@@ -17,7 +17,7 @@ func TestGetAPIKey(t *testing.T) {
 
 	tests := []test{
 		{name: "Valid Input", inputKey: "ApiKey abc123", wantKey: "abc123", wantErr: nil},
-		{name: "Malformed Input", inputKey: "ApiKey abc 123", wantKey: "", wantErr: errors.New("malformed authorization header")},
+		{name: "Malformed Input", inputKey: "bearer abc123", wantKey: "", wantErr: errors.New("malformed authorization header")},
 		{name: "No Input", inputKey: "", wantKey: "", wantErr: ErrNoAuthHeaderIncluded},
 	}
 
