@@ -20,4 +20,4 @@ jobs:
 
       - name: Force Failure
         run:
-          print: go-version
+          print: go version
